@@ -1,22 +1,40 @@
-<h1>Books</h1>
+<div class="row">
+  <div class="span3"><h1>Books</h1></div>
+  <div class="span9">
+    <%= form_tag "/", :method => :get, :class => "input-append" do %>      
+      <div class="input-prepend">
+        <%= search_field_tag :title, params[:title], :placeholder => "search by title" %>
+      </div>
+      <div class="input-append input-prepend">
+        <%= select_tag :author_id, options_for_select([["All authors", ""]]) + options_from_collection_for_select(@authors, "id", "name", :selected=> params[:author_id]) %>
+        
+        <%= select_tag :is_available, options_for_select([["All availability", nil], ["Available", 1], ["Unavailable", 0]], :selected=> params[:is_available])  %>
+        
+        <%= submit_tag "search", :class => "btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
+  "<%= @is_available %> - <%= @is_available.class %>"
 <div id="books" class="row">
   <% if @books.present? %>
     <% @books.each do |book| %>
     <div class="span3">
       <figure>
         <figcaption>
-          <h3><%= book.title %> </h3>
+          <h3><%= book.title %></h3>
           <p class="author"><%= book.author.name %></p>
-          <% if book.is_available %>
-            <%= link_to "Catch it", "#", :class => "btn btn-mini btn-success" %>
-          <% else %>
-            <p><span class="label label-warning">Is leased</span></p>
-            <%= link_to "Check availability", "#", :class => "btn btn-mini" %>
-          <% end %>
         </figcaption>
         <%= image_tag book.image %> 
       </figure>
+      <div class="actions">
+        <% if book.is_available %>
+          <%= link_to "Catch it", "#", :class => "btn btn-large btn-success" %>
+        <% else %>
+          <%= link_to "Check availability", "#", :class => "btn btn-large btn-warning" %>
+        <% end %>
+      </div>
     </div>
     <% end %>
   <% else %>
