@@ -1,3 +1,4 @@
+# encoding: utf-8
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -5,17 +6,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create!(:email => "wfsneto@gmail.com", :password => "morroiamesmo")
+
 Author.create!([
   {:id => 1, :name => "Oliver Bowden"},
   {:id => 2, :name => "Cloves Carneiro Junior"},
   {:id => 3, :name => "Vinicius Baggagio Fuentes"},
   {:id => 4, :name => "Camilo Lopes"},
-  {:id => 5, :name => "Lasse Koskel"},
+  {:id => 5, :name => "George Beahm"},
   {:id => 6, :name => "Mauricio Aniche"},
   {:id => 7, :name => "Kent Beck"},
   {:id => 8, :name => "Robet Kirkman"},
-  {:id => 9, :name => "David Griffiths"}
+  {:id => 9, :name => "David Griffiths"},
+  {:id => 10, :name => "George R. R. Martin"}
 ])
+
 Book.create!([{
   :author_id => 1,
   :title => "assassins creed a cruzada secreta",
@@ -46,8 +51,12 @@ Book.create!([{
   :image => "http://images.wfsneto.com.br/get-you-book/tdd-na-pratica.jpg"
 },{
   :author_id => 5,
-  :title => "test driven",
-  :image => "http://images.wfsneto.com.br/get-you-book/test-driven.jpg"
+  :title => "The Big Bang - A teria",
+  :image => "http://images.wfsneto.com.br/get-you-book/big-bang.jpg"
+},{
+  :author_id => 5,
+  :title => "Steve Jobs Nas Suas Próprias Palavras",
+  :image => "http://images.wfsneto.com.br/get-you-book/steve-jobs-nas-suas-proprias-palavras.jpg"
 },{
   :author_id => 6,
   :title => "test driven development.",
@@ -72,4 +81,24 @@ Book.create!([{
   :author_id => 9,
   :title => "desenvolvimento web agil com rails",
   :image => "http://images.wfsneto.com.br/get-you-book/desenvolvimento-web-agil-com-rails.jpg"
+},{
+  :author_id => 10,
+  :title => "Cronicas de Gelo e Fogo - A fúria dos Reis",
+  :image => "http://images.wfsneto.com.br/get-you-book/a-furia-dos-reis.jpg"
+},{
+  :author_id => 10,
+  :title => "Cronicas de Gelo e Fogo - Festim dos Corvos",
+  :image => "http://images.wfsneto.com.br/get-you-book/festim-dos-corvos.jpg"
+},{
+  :author_id => 10,
+  :title => "Cronicas de Gelo e Fogo - A Tormenta de Espadas",
+  :image => "http://images.wfsneto.com.br/get-you-book/a-tormenta-de-espadas.jpg"
+},{
+  :author_id => 10,
+  :title => "Cronicas de Gelo e Fogo - A dança dos dragões.jpg",
+  :image => "http://images.wfsneto.com.br/get-you-book/danca-dos-dragoes.jpg"
+},{
+  :author_id => 10,
+  :title => "Cronicas de Gelo e Fogo - A Guerra dos Tronos",
+  :image => "http://images.wfsneto.com.br/get-you-book/a-guerra-dos-tronos.jpg"
 }])
