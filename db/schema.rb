@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413222633) do
+ActiveRecord::Schema.define(:version => 20130414020338) do
+
+  create_table "authors", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "books", :force => true do |t|
+    t.string   "title"
+    t.integer  "author_id"
+    t.string   "image",        :default => "http://placehold.it/280x400&text=No+Image"
+    t.boolean  "is_available", :default => true
+    t.datetime "created_at",                                                            :null => false
+    t.datetime "updated_at",                                                            :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
