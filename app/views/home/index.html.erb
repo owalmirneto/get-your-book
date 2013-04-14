@@ -5,8 +5,8 @@
     <% @books.each do |book| %>
     <div class="span3">
       <figure>
-        <%= image_tag book.image, :class =>"img-polaroid" %> 
-        <figcaption><%= book.title %> <%= link_to "get this book", "#", :class =>"btn btn-mini" %></figcaption>
+        <%= image_tag book.image, :class => "img-polaroid" %> 
+        <!-- <figcaption><%= book.title %> <%= link_to "get", "#", :class =>"btn btn-mini" %></figcaption> -->
       </figure>
     </div>
     <% end %>
