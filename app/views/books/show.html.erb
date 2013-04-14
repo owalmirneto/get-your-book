@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="span3"><h1>Book</h1></div>
+  <div class="span9">
+    <br>
+    <%= render "books/search" %>
+  </div>
+</div>
+
+<p><%= @book.to_json %></p>
+<div id="book" class="row">
+  <div class="span12">
+    <figure>
+      <%= image_tag @book.image %>
+    </figure>
+    <div class="details">
+      <h2><%= @book.title %></h2>
+      <p class="author"><%= @book.author.name %></p>
+      <p><%= get_status @book %></p>
+    </div>
+  </div>
+</div>

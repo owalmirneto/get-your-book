@@ -1,6 +1,8 @@
 GetYourBook::Application.routes.draw do
   devise_for :users
 
+  resources :books, :only => :show
+
   root :to => "home#index"
   
   get "home/index"

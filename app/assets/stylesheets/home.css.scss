@@ -4,7 +4,24 @@
 
 @import "twitter/bootstrap/variables";
 @import "twitter/bootstrap/mixins";
-
+figure {
+  margin: 0;
+  padding: 0;
+}
+#book {
+  figure {
+    float:left;
+    margin-right: 10px;
+    img {
+      width:200px;
+    }
+  }
+  .details {
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
 #books {
   .span3 {
     margin-bottom:35px;
@@ -19,8 +36,6 @@
     }
     
     figure {
-      margin: 0;
-      padding: 0;
       width: 219px;
       height: 309px;
       overflow:hidden;
