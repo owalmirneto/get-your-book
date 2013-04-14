@@ -1,12 +1,21 @@
-<h1>Books is available</h1>
+<h1>Books</h1>
 
 <div id="books" class="row">
   <% if @books.present? %>
     <% @books.each do |book| %>
     <div class="span3">
       <figure>
-        <%= image_tag book.image, :class => "img-polaroid" %> 
-        <!-- <figcaption><%= book.title %> <%= link_to "get", "#", :class =>"btn btn-mini" %></figcaption> -->
+        <figcaption>
+          <h3><%= book.title %> </h3>
+          <p class="author"><%= book.author.name %></p>
+          <% if book.is_available %>
+            <%= link_to "Catch it", "#", :class => "btn btn-mini btn-success" %>
+          <% else %>
+            <p><span class="label label-warning">Is leased</span></p>
+            <%= link_to "Check availability", "#", :class => "btn btn-mini" %>
+          <% end %>
+        </figcaption>
+        <%= image_tag book.image %> 
       </figure>
     </div>
     <% end %>
