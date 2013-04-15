@@ -65,6 +65,10 @@ module GetYourBook
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # pre compile images
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    # pre compile styles and scripts
+    config.assets.precompile += %w(*.css *.js)
   end
 end
