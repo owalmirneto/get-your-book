@@ -14,3 +14,6 @@
 //= require jquery_ujs
 
 //= require twitter/bootstrap
+$(document).ready( function () {
+  $("[data-toggle=tooltip]").tooltip();
+})

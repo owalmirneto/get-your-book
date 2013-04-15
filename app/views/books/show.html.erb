@@ -1,20 +1,18 @@
 <div class="row">
-  <div class="span3"><h1><i class="icon-book"></i> Books</h1></div>
-  <div class="span9">
-    <br>
-    <%= render "books/search" %>
+  <div class="span3">
+    <%= render "shared/sidebar" %>
   </div>
-</div>
-
-<div id="book" class="row">
-  <div class="span12">
-    <figure>
-      <%= image_tag @book.image %>
-    </figure>
-    <div class="details">
-      <h2><%= @book.title %></h2>
-      <p class="author"><%= @book.author.name %></p>
-      <p><%= get_status @book %></p>
+  <div class="span9">
+    <p><%= render "search" %></p>
+    <div class="book">
+      <figure>
+        <%= image_tag @book.image %>
+      </figure>
+      <div class="details">
+        <h2><%= @book.title %></h2>
+        <p class="author"><%= @book.author.name %></p>
+        <p><%= get_status @book %></p>
+      </div>
     </div>
   </div>
 </div>

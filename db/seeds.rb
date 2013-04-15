@@ -18,7 +18,8 @@ Author.create!([
   {:id => 7, :name => "Kent Beck"},
   {:id => 8, :name => "Robet Kirkman"},
   {:id => 9, :name => "David Griffiths"},
-  {:id => 10, :name => "George R. R. Martin"}
+  {:id => 10, :name => "George R. R. Martin"},
+  {:id => 11, :name => "Michael Fitzgerald"}
 ])
 
 Book.create!([{
@@ -121,4 +122,9 @@ Book.create!([{
   :title => "Cronicas de Gelo e Fogo - A Guerra dos Tronos",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/a-guerra-dos-tronos.jpg"
+},{
+  :author_id => 11,
+  :title => "Learning Ruby",
+  :is_available => false,
+  :image => "http://images.wfsneto.com.br/get-you-book/learning-ruby.jpg"
 }])

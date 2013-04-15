@@ -6,4 +6,12 @@ module BooksHelper
       content_tag :span, "Check availabity", :class => "badge badge-warning"
     end
   end
+
+  def available_link_to(book)
+    if book.is_available
+      link_to "Catch it", book_path(book), :class => "btn btn-large btn-success"
+    else
+      link_to "Check availability", book_path(book), :class => "btn btn-large btn-warning"
+    end
+  end
 end

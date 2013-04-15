@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html><head>
-  <title>Get Your Book</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= csrf_meta_tags %>
 
-  <!--[if lt IE 8]><%= stylesheet_link_tag "application-ie", media: "all" %><![endif]-->
+<title>Get Your Book</title>
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%= csrf_meta_tags %>
 
-  <%= favicon_link_tag %>
+<!--[if lt IE 8]><%= stylesheet_link_tag "application-ie", media: "all" %><![endif]-->
+
+<%= favicon_link_tag %>
+
 </head><body>
 
-<div class="container"><%= yield %></div>
+<div class="container">
+  <%= yield %>
+  <br clear="all" />
+</div>
+
+<footer class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="<%= root_path %>"><i class="icon-book"></i> Get Your Book</a>
+      <ul class="nav pull-right">
+        <li><a href="http://wfsneto.com.br" target="_blank"><i class="icon-beaker"></i> wfsneto</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
 <%= javascript_include_tag "application" %>
 

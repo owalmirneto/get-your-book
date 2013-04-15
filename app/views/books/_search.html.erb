@@ -1,4 +1,4 @@
-<%= form_tag root_path, :method => :get, :class => "input-append pull-right" do %>      
+<%= form_tag root_path, :method => :get, :class => "input-append" do %>      
   <div class="input-prepend">
     <%= search_field_tag :title, params[:title], :placeholder => "search by title" %>
   </div>
@@ -7,6 +7,6 @@
     
     <%= select_tag :is_available, options_for_select([["All availability", nil], ["Available", 1], ["Unavailable", 0]], :selected=> params[:is_available])  %>
     
-    <%= submit_tag "search", :class => "btn" %>
+    <%= submit_tag "Go", :class => "btn" %>
   </div>      
 <% end %>
