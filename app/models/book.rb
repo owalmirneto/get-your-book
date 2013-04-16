@@ -4,6 +4,8 @@ class Book < ActiveRecord::Base
 
   # relationships
   belongs_to :author
+  has_many :rents
+  has_many :students, :through => :rents
 
   # scopes
   scope :order_by_title, lambda { order("title ASC") }

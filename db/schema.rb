@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414020338) do
+ActiveRecord::Schema.define(:version => 20130416030237) do
 
   create_table "authors", :force => true do |t|
     t.string "name"
@@ -24,6 +24,24 @@ ActiveRecord::Schema.define(:version => 20130414020338) do
     t.boolean  "is_available", :default => true
     t.datetime "created_at",                                                            :null => false
     t.datetime "updated_at",                                                            :null => false
+  end
+
+  create_table "rents", :force => true do |t|
+    t.integer  "book_id"
+    t.integer  "student_id"
+    t.integer  "user_id"
+    t.date     "withdrawn_at"
+    t.date     "delivered_at"
+    t.string   "status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "students", :force => true do |t|
+    t.string   "name"
+    t.integer  "registration"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

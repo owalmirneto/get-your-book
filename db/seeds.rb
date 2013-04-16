@@ -29,8 +29,8 @@ Book.create!([{
   :image => "http://images.wfsneto.com.br/get-you-book/assassins-creed-a-cruzada-secreta.jpg"
 },{
   :author_id => 1,
-  :title => "Assassin's creed - Renascenca",
-  :is_available => false,
+  :title => "Assassin's creed - Renascença",
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/assassins-creed-renascenca.jpg"
 },{
   :author_id => 1,
@@ -40,7 +40,7 @@ Book.create!([{
 },{
   :author_id => 1,
   :title => "Assassin's creed - Revelations",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/assassins-creed-revelations.jpg"
 },{
   :author_id => 2,
@@ -50,7 +50,7 @@ Book.create!([{
 },{
   :author_id => 3,
   :title => "Ruby on Rails",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/ruby-on-rails-vinicius-baggagio-fuentes.jpg"
 },{
   :author_id => 4,
@@ -60,7 +60,7 @@ Book.create!([{
 },{
   :author_id => 5,
   :title => "The Big Bang - A teoria",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/big-bang.jpg"
 },{
   :author_id => 5,
@@ -70,7 +70,7 @@ Book.create!([{
 },{
   :author_id => 6,
   :title => "Test driven development",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/test-driven-development.jpeg"
 },{
   :author_id => 7,
@@ -80,7 +80,7 @@ Book.create!([{
 },{
   :author_id => 8,
   :title => "The walking dead the road woodbury",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/the-walking-dead-the-road-woodbury.jpg"
 },{
   :author_id => 8,
@@ -90,7 +90,7 @@ Book.create!([{
 },{
   :author_id => 9,
   :title => "Use a cabeça rails",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/use-a-cabeca-rails.jpg"
 },{
   :author_id => 9,
@@ -100,7 +100,7 @@ Book.create!([{
 },{
   :author_id => 10,
   :title => "Cronicas de Gelo e Fogo - A fúria dos Reis",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/a-furia-dos-reis.jpg"
 },{
   :author_id => 10,
@@ -110,7 +110,7 @@ Book.create!([{
 },{
   :author_id => 10,
   :title => "Cronicas de Gelo e Fogo - A Tormenta de Espadas",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/a-tormenta-de-espadas.jpg"
 },{
   :author_id => 10,
@@ -120,11 +120,11 @@ Book.create!([{
 },{
   :author_id => 10,
   :title => "Cronicas de Gelo e Fogo - A Guerra dos Tronos",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/a-guerra-dos-tronos.jpg"
 },{
   :author_id => 11,
   :title => "Learning Ruby",
-  :is_available => false,
+  :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/learning-ruby.jpg"
 }])
