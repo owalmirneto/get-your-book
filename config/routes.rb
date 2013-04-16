@@ -1,5 +1,8 @@
 GetYourBook::Application.routes.draw do
+  resources :rents, :only => [:index, :create]
+
   devise_for :users
+
 
   resources :books, :only => [:index, :show]
 

@@ -4,14 +4,17 @@
   </div>
   <div class="span9">
     <p><%= render "search" %></p>
-    <div id="book">
-      <figure>
-        <%= image_tag @book.image %>
-      </figure>
-      <div class="details">
+    <div id="book" class="row">
+      <div class="span3">
+        <figure>
+          <%= image_tag @book.image %>
+        </figure>
+      </div>
+      <div class="span6 details">
         <h2><%= @book.title %></h2>
         <p class="author"><%= @book.author.name %></p>
         <p><%= get_status @book %></p>
+        <p><%= @book.to_json %></p>
       </div>
     </div>
   </div>
