@@ -22,6 +22,14 @@ Author.create!([
   {:id => 11, :name => "Michael Fitzgerald"}
 ])
 
+Student.create!([
+  {:name => "Anna Júlia"}, 
+  {:name => "Dayana Paula"},
+  {:name => "Agripina Pereira"},
+  {:name => "Martinha Santos"},
+  {:name => "Walmir Neto"}
+s])
+
 Book.create!([{
   :author_id => 1,
   :title => "Assassin's creed - A cruzada secreta",

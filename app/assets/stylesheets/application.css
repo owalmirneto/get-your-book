@@ -10,11 +10,14 @@
  *
  *= require_self
  *= require books
+ *= require rents
  */
 
 @import "twitter/bootstrap-no-sprites";
 @import "twitter/bootstrap/responsive";
 
 @import "font-awesome";
+
+@import "formtastic-bootstrap";
 
 @import "screen";

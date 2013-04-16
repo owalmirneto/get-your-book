@@ -1,10 +1,8 @@
 module BooksHelper
   def get_status(book)
-    if book.is_available
-      link_to "Catch it", "#", :class => "btn btn-success catch-it"
-    else
-      content_tag :span, "Check availabity", :class => "badge badge-warning"
-    end
+    label = book.is_available ? "This book is available." : "Unavailable, Check availabity."
+    type = book.is_available ? "success" : "warning"
+    content_tag :span, label, :class => "badge badge-#{type}"
   end
 
   def available_link_to(book)

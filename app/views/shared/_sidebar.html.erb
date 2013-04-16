@@ -1,5 +1,5 @@
 <div class="affix">
-  <h1><i class="icon-book"></i> <%= @page_title %></h1>
+  <h1><i class="icon-book"></i> <%= params[:controller].capitalize %></h1>
   <ul class="nav nav-list">
     <li class="<%= 'active' if params[:controller] == "books" %>"><%= link_to 'Books', books_path %></li>
     <li class="<%= 'active' if params[:controller] == "rents" %>"><%= link_to 'Rents', rents_path %></li>
