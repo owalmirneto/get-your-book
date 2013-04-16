@@ -9,12 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ 
+ *= require bootstrap/bootstrap.min
+ *= require bootstrap/bootstrap-responsive.min
+ 
  *= require books
  *= require rents
 
- *= require twitter/bootstrap-no-sprites
- *= require twitter/bootstrap/_responsive
- 
  *= require font-awesome
  
  *= require formtastic-bootstrap

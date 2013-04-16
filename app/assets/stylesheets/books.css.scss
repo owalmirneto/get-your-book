@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "twitter/bootstrap/variables";
-@import "twitter/bootstrap/mixins";
+@import "bootstrap/_variables";
+@import "bootstrap/_mixins";
+
 figure {
   margin: 0;
   padding: 0;
