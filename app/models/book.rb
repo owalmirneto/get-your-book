@@ -8,6 +8,7 @@ class Book < ActiveRecord::Base
   has_many :students, :through => :rents
 
   # scopes
+  scope :latest_rent, lambda { order("title ASC") }
   scope :order_by_title, lambda { order("title ASC") }
   scope :by_title, lambda { |title| where("title LIKE ?", "%#{title}%") }
   scope :available, lambda { |is_available| where("is_available = ?", !is_available.to_i.zero?) }

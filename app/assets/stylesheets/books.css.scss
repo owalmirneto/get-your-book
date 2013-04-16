@@ -20,9 +20,18 @@ figure {
     h2 {
       margin-top: 0;
       font-size:27px;
+      margin-bottom:25px;
     }
-    p {
-      font-size:17px;
+    .author {
+      font-size:20px;
+      margin-bottom:35px;
+    }
+    #form-rent {
+      .alert {
+        font-size:17px;
+        color: #7f7f7f;
+        padding: 25px 30px;
+      }
     }
   }
 }

@@ -3,7 +3,56 @@
     <%= render "shared/sidebar" %>
   </div>
   <div class="span9">
-    <h1>Rents#index</h1>
-    <p>Find me in app/views/rents/index.html.erb</p>
+    <p><%= render "books/search" %></p>
+    <!-- {
+      "book_id":16,
+      "created_at":"2013-04-16T05:08:53Z",
+      "delivered_at":null,
+      "delivery_expected_at":"2013-04-23",
+      "id":1,
+      "status":null,
+      "student_id":3,
+      "updated_at":"2013-04-16T05:08:53Z",
+      "user_id":1,
+      "withdrawn_at":null
+    } -->
+    <% if @rents.present? %>
+      <div id="rents">
+        <table class="table table-bordered table-hover"><thead>
+          <tr>
+            <th>Book</th>
+            <th>Rented by</th>
+            <th>Expected at</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead><tbody>
+          <% @rents.each do |rent| %>
+            <tr>
+              <td><%= rent.book.title %></td>
+              <td><%= rent.student.name %></td>
+              <td><%= rent.delivery_expected_at.strftime("%B %d, %Y") %></td>
+              <td class="actions"><span class="icon-eye-open" id="view-details-<%= rent.id %>" data-id="<%= rent.id %>"></span></td>
+            </tr>
+            <tr id="details-<%= rent.id %>"><td colspan="4">
+              <%= rent.user.name %> - <%= rent.status %>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </td></tr>
+          <% end %>
+        </tbody></table>
+      </div>
+    <% else %>
+      <p class="alert"><b>Atention!</b> record not found.</p>
+    <% end %>
   </div>
 </div>

@@ -12,21 +12,26 @@
       </div>
       <div class="span6 details">
         <h2><%= @book.title %></h2>
-        <p class="author"><%= @book.author.name %></p>
-        <p><%= get_status @book %></p>
+        <p class="author"><%= @book.author.name %> <%= get_status @book %></p>
 
         <div id="form-rent">
-          <%= semantic_form_for @rent do |f| %>
-            <%= f.input :book_id, :as => :hidden, :input_html => { :value => @book.id } %>
+          <% if @book.is_available %>
+            <%= semantic_form_for @rent do |f| %>
+              <%= f.input :book_id, :as => :hidden, :input_html => { :value => @book.id } %>
+              <label>Choose a students</label>
+              <div class="input-append">
+                <%= f.input :student_id, :as => :select, :label => false, :collection => @students %>
 
-            <div class="input-append">
-              <%= f.input :student_id, :as => :select, :label => false, :collection => @students %>
-
-              <%= f.button "Catch it", :class => "btn btn-success" %>
-            </div>
+                <%= f.button "Catch it", :class => "btn btn-success" %>
+              </div>
+            <% end %>
+            
+            <%= link_to "back to books", books_path, :class => "btn btn-mini" %>
+          <% else %>
+            <p class="alert">The book was leased by <b><%= @book.rents.last.student.name %></b> and is expected to 
+            be delivered on <b><%= @book.rents.last.delivery_expected_at.strftime("%B %d, %Y") %></b>. <br>
+            <b>Employee who leased the book</b>: <i><%= @book.rents.last.user.name %></i>.</p>
           <% end %>
-          
-          <%= link_to "back to books", books_path, :class => "btn btn-mini" %>
         </div>
       </div>
     </div>

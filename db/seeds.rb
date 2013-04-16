@@ -6,7 +6,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(:email => "wfsneto@gmail.com", :password => "morroiamesmo")
+User.create!(:name => "Walmir Neto", :email => "wfsneto@gmail.com", :password => "morroiamesmo")
 
 Author.create!([
   {:id => 1, :name => "Oliver Bowden"},
@@ -28,7 +28,7 @@ Student.create!([
   {:name => "Agripina Pereira"},
   {:name => "Martinha Santos"},
   {:name => "Walmir Neto"}
-s])
+])
 
 Book.create!([{
   :author_id => 1,

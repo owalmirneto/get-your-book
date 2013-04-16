@@ -5,3 +5,20 @@
 #rent_student_id_input {
   float:left;
 }
+
+#rents {
+  table {
+    background:#fff;
+    td,th {
+      vertical-align:middle;
+      &.actions{
+        text-align:center;
+        span {
+          cursor:pointer;
+        }
+      }
+    }
+  }
+}
+
+[id^="details-"] { display:none; }
