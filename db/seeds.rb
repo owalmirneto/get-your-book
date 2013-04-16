@@ -24,42 +24,42 @@ Author.create!([
 
 Book.create!([{
   :author_id => 1,
-  :title => "assassins creed a cruzada secreta",
+  :title => "Assassin's creed - A cruzada secreta",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/assassins-creed-a-cruzada-secreta.jpg"
 },{
   :author_id => 1,
-  :title => "assassins creed renascenca",
+  :title => "Assassin's creed - Renascenca",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/assassins-creed-renascenca.jpg"
 },{
   :author_id => 1,
-  :title => "assassins creed renegado",
+  :title => "Assassin's creed - Renegado",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/assassins-creed-renegado.jpg"
 },{
   :author_id => 1,
-  :title => "assassins creed revelations",
+  :title => "Assassin's creed - Revelations",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/assassins-creed-revelations.jpg"
 },{
   :author_id => 2,
-  :title => "Rails 3 basico",
+  :title => "Rails 3 básico",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/livro-rails-3-basico.jpg"
 },{
   :author_id => 3,
-  :title => "ruby on rails",
+  :title => "Ruby on Rails",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/ruby-on-rails-vinicius-baggagio-fuentes.jpg"
 },{
   :author_id => 4,
-  :title => "tdd na pratica",
+  :title => "TDD na prática",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/tdd-na-pratica.jpg"
 },{
   :author_id => 5,
-  :title => "The Big Bang - A teria",
+  :title => "The Big Bang - A teoria",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/big-bang.jpg"
 },{
@@ -69,32 +69,32 @@ Book.create!([{
   :image => "http://images.wfsneto.com.br/get-you-book/steve-jobs-nas-suas-proprias-palavras.jpg"
 },{
   :author_id => 6,
-  :title => "test driven development.",
+  :title => "Test driven development",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/test-driven-development.jpeg"
 },{
   :author_id => 7,
-  :title => "test driven development by example",
+  :title => "Test driven development by example",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/test-driven-development-by-example.jpg"
 },{
   :author_id => 8,
-  :title => "the walking dead the road woodbury",
+  :title => "The walking dead the road woodbury",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/the-walking-dead-the-road-woodbury.jpg"
 },{
   :author_id => 8,
-  :title => "i love the walking dead",
+  :title => "I love The walking dead",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/i-love-the-walking-dead.jpg"
 },{
   :author_id => 9,
-  :title => "use a cabeca rails",
+  :title => "Use a cabeça rails",
   :is_available => false,
   :image => "http://images.wfsneto.com.br/get-you-book/use-a-cabeca-rails.jpg"
 },{
   :author_id => 9,
-  :title => "desenvolvimento web agil com rails",
+  :title => "Desenvolvimento web agil com rails",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/desenvolvimento-web-agil-com-rails.jpg"
 },{
@@ -114,7 +114,7 @@ Book.create!([{
   :image => "http://images.wfsneto.com.br/get-you-book/a-tormenta-de-espadas.jpg"
 },{
   :author_id => 10,
-  :title => "Cronicas de Gelo e Fogo - A dança dos dragões.jpg",
+  :title => "Cronicas de Gelo e Fogo - A dança dos dragões",
   :is_available => true,
   :image => "http://images.wfsneto.com.br/get-you-book/danca-dos-dragoes.jpg"
 },{

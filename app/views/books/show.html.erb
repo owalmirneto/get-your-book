@@ -4,12 +4,12 @@
   </div>
   <div class="span9">
     <p><%= render "search" %></p>
-    <div class="book">
+    <div id="book">
       <figure>
         <%= image_tag @book.image %>
       </figure>
       <div class="details">
-        <h2><%= @book.title %></h2>
+        <h2><%= @book.title.capitalize %></h2>
         <p class="author"><%= @book.author.name %></p>
         <p><%= get_status @book %></p>
       </div>

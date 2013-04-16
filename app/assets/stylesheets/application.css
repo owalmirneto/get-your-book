@@ -17,6 +17,4 @@
 
 @import "font-awesome";
 
-body {
-  background: url(http://images.blog.wfsneto.com.br/background/body.png) fixed;
-}
+@import "screen";
