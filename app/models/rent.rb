@@ -16,6 +16,6 @@ class Rent < ActiveRecord::Base
   end
 
   def set_status
-    self.set_status = :rented
+    self.status = :rented
   end
 end
