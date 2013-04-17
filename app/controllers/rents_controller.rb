@@ -29,7 +29,7 @@ class RentsController < ApplicationController
     if rent.save
       rent.book.is_available = true
       rent.book.save
-      flash[:success] = "The book was marked with rentedasdasasd"
+      flash[:success] = "The book was marked with available"
       redirect_to rents_path
     else
       flash[:error] = "An error occurred while trying to rent the book, try again"
