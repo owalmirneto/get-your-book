@@ -10,15 +10,15 @@
   table {
     background:#fff;
     td,th {
+      cursor:default;
       vertical-align:middle;
-      &.actions{
+      a {
+        color:#000;
+        cursor:pointer;
+      }
+      &.center{
         text-align:center;
-        span {
-          cursor:pointer;
-        }
       }
     }
   }
 }
-
-[id^="details-"] { display:none; }
