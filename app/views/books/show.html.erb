@@ -25,19 +25,20 @@
                 <%= f.button "Catch it", :class => "btn btn-success" %>
               </div>
             <% end %>
-            
             <%= link_to "back to books", books_path, :class => "btn btn-mini" %>
           <% else %>
-            <p class="alert">The book was leased by <b><%= @book.rents.last.student.name %></b> and is expected to 
-            be delivered on <b><%= @book.rents.last.delivery_expected_at.strftime("%B %d, %Y") %></b>. <br>
-            <b>Employee who leased the book</b>: <i><%= @book.rents.last.user.name %></i>.</p>
+            <div class="alert">The book was leased by <b><%= @current_rent.student.name %></b> and is expected to 
+            be delivered on <b><%= @current_rent.delivery_expected_at.strftime("%B %d, %Y") %></b>. <br>
+            <b>Employee who leased the book</b>: <i><%= @current_rent.user.name %></i>.</div>
+
+              <%= semantic_form_for @current_rent do |f| %>
+                <%= f.button "receive book", :class => "btn btn-warning" %>
+                <%= link_to "back to books", books_path, :class => "btn btn-mini" %>
+              <% end %>
           <% end %>
+            
         </div>
       </div>
-    </div>
-
-    <div class="span9">
-      
     </div>
   </div>
 </div>

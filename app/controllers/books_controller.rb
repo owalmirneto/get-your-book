@@ -9,9 +9,8 @@ class BooksController < ApplicationController
   
   def show
     @book = Book.find(params[:id])
-
+    @current_rent = @book.rents.last
     @students = Student.all
-
     @rent = Rent.new
   end
 end

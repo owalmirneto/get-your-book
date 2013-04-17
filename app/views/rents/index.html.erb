@@ -11,7 +11,9 @@
             <th>Book</th>
             <th>Rented by</th>
             <th>Status</th>
+            <th>Created at</th>
             <th>Expected at</th>
+            <th>Delivered at</th>
             <th>&nbsp;</th>
           </tr>
         </thead><tbody>
@@ -20,10 +22,11 @@
               <td><%= rent.book.title %></td>
               <td><%= rent.student.name %></td>
               <td><%= statuses rent %></td>
-              <td><%= rent.delivery_expected_at.strftime("%B %d, %Y") %></td>
+              <td class="center"><%= time_ago_in_words rent.created_at %></td>
+              <td class="center"><%= rent.delivery_expected_at.strftime("%B %d") %></td>
+              <td class="center"><%= rent.delivered_at.present? ? rent.delivered_at.strftime("%B %d") : "not yet" %></td>
               <td class="center">
-                <%= link_to '', '#', :class => 'icon-eye-open' %>&nbsp;
-                <%= link_to '', '#', :class => 'icon-ok' %>
+                <%= link_to '', rent.book, :class => 'icon-eye-open' %>
               </td>
             </tr>
           <% end %>
