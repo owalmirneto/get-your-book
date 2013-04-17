@@ -3,7 +3,6 @@ GetYourBook::Application.routes.draw do
 
   devise_for :users
 
-
   resources :books, :only => [:index, :show]
 
   root :to => "books#index"
