@@ -9,6 +9,11 @@ class Rent < ActiveRecord::Base
   belongs_to :student
   belongs_to :user
 
+  def save_book
+    self.book.is_available = false
+    self.book.save
+  end
+
   protected
 
   def set_delivery_expected_at
